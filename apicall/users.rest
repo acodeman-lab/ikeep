@@ -1,0 +1,8 @@
+POST http://localhost:3400/users/sign-up 
+Content-Type: application/json
+
+{
+    "name":"Naruto",
+    "email":"naruto@leaf.co",
+    "password":"Pass123#"
+}
