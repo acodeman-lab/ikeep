@@ -3,7 +3,11 @@ const userRoute = express.Router();
 const  users = require('../models/user.model');
 
 userRoute.post('/login',(req,res) =>{
-   res.send('login api');
+   try {
+      res.status(200);
+   } catch (error) {
+      res.status(400).json({message: error});
+   }
 });
 
 userRoute.post('/sign-up', async (req, res)=>{
